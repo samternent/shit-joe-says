@@ -1,5 +1,5 @@
 {
-  "name": "react-app",
+  "name": "shit-joe-says",
   "version": "0.0.1",
   "main": "server.js",
   "scripts": {},
@@ -24,6 +24,6 @@
     "tbg_react_dom": "^0.1.0",
     "watch": "^0.16.0"
   },
-  "description": "basic node / react app structure",
+  "description": "just some shit joe says",
   "license": "MIT"
 }
