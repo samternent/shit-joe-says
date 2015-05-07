@@ -19,7 +19,7 @@ SocialButton  = React.createFactory(require('./social_button.coffee'))
 #
 # @author Sam
 #
-ZlatanSays =
+ShitJoeSays =
 
   # --------------------------------------------
   # Defaults
@@ -84,21 +84,23 @@ ZlatanSays =
 
   render: ->
     DOM.div({
-        className: 'zlatan-says'
+        className: 'joe-says'
         },
       DOM.div({ className: 'question' }, Quotes[ @state.quote ].question )
-
-      DOM.h1({ className: 'title', onClick: @_handleClick }, 'zlatan says' )
+      DOM.h1({ className: 'title', onClick: @_handleClick }, 'shit joe says' )
       DOM.div({ className: 'click', onClick: @_handleClick }, 'click for a quote' )
-      DOM.div({ className: 'quote' }, Quotes[ @state.quote ].quote )
+      DOM.div({ className: 'quote' },
+        DOM.div({ className: 'image' })
+        Quotes[ @state.quote ].quote
+      )
 
       SocialButton({
         buttonType    : 'facebook'
         buttonText    : 'Share'
         title         : "#{Quotes[ @state.quote ].quote}"
-        link          : 'https://zlatan-says.herokuapp.com/'
+        link          : 'https://shit-joe-says.herokuapp.com/'
         caption       : "#{Quotes[ @state.quote ].question}"
-        picture       : 'https://zlatan-says.herokuapp.com/img/zlatan_jpg.jpg'
+        picture       : 'https://shit-joe-says.herokuapp.com/img/joe.jpg'
         redirect_uri  : 'https://zlatan-says.herokuapp.com/'
       })
 
@@ -106,10 +108,10 @@ ZlatanSays =
         buttonType    : 'twitter'
         buttonText    : 'Tweet'
         title         : Quotes[ @state.quote ].quote
-        link          : 'https://zlatan-says.herokuapp.com/'
-        hashtags      : 'ZlatanSays'
+        link          : 'https://shit-joe-says.herokuapp.com/'
+        hashtags      : 'ShitJoeSays'
       })
     )
 
 
-module.exports = React.createClass(ZlatanSays)
+module.exports = React.createClass(ShitJoeSays)

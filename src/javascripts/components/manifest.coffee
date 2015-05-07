@@ -1,2 +1,2 @@
 module.exports =
-  ZlatanSays: require('./zlatan_says.coffee')
+  ShitJoeSays: require('./shit_joe_says.coffee')
